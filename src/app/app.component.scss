@@ -48,18 +48,25 @@ body.dark {
   .menu-bar .mode {
     transition: $tran-03;
     background: $primary-color-dark;
+
+    i.sun{
+      opacity: 1;
+    }
+
+    i.moon{
+      opacity: 0;
+    }
   }
+
+
 }
 
 
-
-/* ======== Resuable CSS ========*/
 
 .sidebar .text{
   font-size: 18px;
   font-weight: 500;
   color: $text-color;
-  transition: $tran-04;
   white-space: nowrap;
 }
 
@@ -96,7 +103,7 @@ body.dark {
   opacity: 0;
 }
 
-.sidebar li .icon{
+.sidebar li .icon, .logo-icon{
   color: $primary-color;
   display: flex;
   align-items: center;
@@ -116,6 +123,7 @@ body.dark {
 }
 
 .sidebar .image-text img {
+  margin-top: 10px;
   width: 170px;
 }
 
@@ -185,7 +193,6 @@ header .image-text .header-text{
 
 .menu-bar .mode .moon-sun{
   height: 50px;
-  width: 60px;
   display: flex;
   align-items: center;
 }
@@ -206,6 +213,7 @@ header .image-text .header-text{
   justify-content: center;
   height: 100%;
   min-width: 60px;
+  cursor: pointer;
 }
 
 .toggle-switch .switch{
@@ -226,10 +234,23 @@ header .image-text .header-text{
   left: 5px;
   transform: translateY(-50%);
   background: $sidebar-color;
-  transition: $tran-03;
+  transition: $tran-02;
 }
 
 body.dark
   .switch::before{
   left: 24px;
  }
+
+
+ .logo-icon{
+  margin-top: 10px;
+  font-size: 40px;
+  color: $primary-color;
+ }
+
+.mode {
+  .mode-text {
+    margin-left: 60px;
+  }
+}

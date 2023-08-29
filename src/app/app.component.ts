@@ -10,15 +10,23 @@ export class AppComponent {
 
   darkMode: boolean = false;
   close: boolean = false;
+  colorMode: string = 'Dark Mode';
 
 
   toggleDarkMode(){
     this.darkMode = !this.darkMode;
+
+    if(this.darkMode){
+      this.colorMode = 'Light Mode';
+    }else{
+      this.colorMode = 'Dark Mode';
+    }
+
+
   }
 
   toggleClose(){
     this.close = !this.close;
-    console.log('1asdsad')
   }
 
 }

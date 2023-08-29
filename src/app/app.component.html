@@ -3,7 +3,8 @@
     <header>
       <div class="image-text">
         <span class="image">
-          <img src="../assets/logo1.png" alt="">
+          <img src="../assets/logo1.png" alt="" *ngIf="!close">
+          <i class='bx bxs-objects-vertical-bottom logo-icon' *ngIf="close" ></i>
         </span>
 
         <!-- <div class="text header-text">
@@ -58,7 +59,7 @@
             <i class="bx bx-moon icon moon"></i>
             <i class="bx bx-sun icon sun"></i>
           </div>
-          <span class="mode-text text">Dark Mode</span>
+          <span class="mode-text text">{{colorMode}}</span>
           <div class="toggle-switch" (click)="toggleDarkMode()">
             <span class="switch"></span>
           </div>
